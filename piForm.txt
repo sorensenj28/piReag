@@ -1,0 +1,33 @@
+TC Stock Solution 1000 mg C/L
+
+500 mL:
+Dissolve 1.064 g of potassium hydrogen phthalate in 500 mL volumetric flask
+Dilute to line
+
+1000 mL:
+Dissolve 2.128 g of potassium hydrogen phthalate in 1000 mL volumetric flask
+Dilute to line
+
+IC Stock Solution 1000 mg C/L
+
+500 mL:
+Dissolve 2.209 g of sodium carbonate in 500 mL volumetric flask
+Add 1.75 g of sodium hydrogen carbonate
+Dilute to line
+
+1000 mL:
+Dissolve 4.418 g of sodium carbonate in 1000 mL volumetric flask
+Add 3.500 g of sodium hydrogen carbonate
+Dilute to line
+
+TN Stock Solution 1000 mg N/L
+
+500 mL:
+Dissolve 2.3585 g of ammonium sulate in 500 mL volumetric flask
+Add 3.6095 g of potassium nitrate
+Dilute to line
+
+1000 mL:
+Dissolve 4.717 g of ammonium sulfate in 1000 mL volumetric flask
+Add 7.219 g of potassium nitrate
+Dilute to mark
