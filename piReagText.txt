@@ -22,13 +22,15 @@ Dilute to mark."
 "500 mL:
 Fill a 500 mL volumetric flask half full with Deionized Water
 Add 50 mL of 32% Hydrochloric Acid
-Add 0.25 g of N-(1Naphtyl)ethylenediamine dihydrochloride
+Add 0.25 g of N-(1Naphtyl)ethylenediamine dihydrochloride 
+Add 5 g of Sulfanilamide
 Dilute to mark.
 
 1 L:
 Fill a 1000 mL volumetric flask half full with Deionized Water
 Add 100 mL of 32% Hydrochloric Acid
 Add 0.5 g of N-(1Naphthyl)ethylenediamine dihydrochloride
+Add 10 g of Sulfanilamide
 Dilute to mark."
 
 "500 mL:
