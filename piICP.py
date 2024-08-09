@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+42#!/usr/bin/env python3
 import tkinter as tk
 import tkinter.scrolledtext as st
 from tkinter import ttk
@@ -113,7 +113,70 @@ class GUI:
                                                                               column = 0,
                                                                               pady = 20)
 
+    def conc_checks():
+        concentrations = [0.25, 0.50, 1.0, 2.5, 5.0, 10.0, 20.0, 25.0, 40.0, 50.0, 100.0,
+                          200.0, 400.0, 800.0]
+        checkbutton_vars = []
+        concentration_for_standards = []
+        conc_select = tk.Tk()
+        conc_select.title("ICP Standard Cookbook by John")
+        conc_select.geometry("1024x600")
+        for i in range(14):
+            if i <= 3:
+                var = tk.IntVar()
+                checkbutton_vars.append(var)
+                checkbutton = tk.Checkbutton(conc_select,
+                                            text = str(concentrations[i]) + "ppm",
+                                            font = ("Arial", 15),
+                                            bd = (15),
+                                            variable = var,
+                                            command = lambda: [concentration_for_standards.append(concentrations[i])]).grid(row = 0,
+                                                                 column = i,
+                                                                 padx = 10,
+                                                                 pady = 10)
+            elif i > 3 and i < 8:
+                var = tk.IntVar()
+                checkbutton_vars.append(var)
+                checkbutton = tk.Checkbutton(conc_select,
+                                            text = str(concentrations[i]) + "ppm",
+                                            font = ("Arial", 15),
+                                            bd = (15),
+                                            variable = var).grid(row = 1,
+                                                                 column = i - 4,
+                                                                 padx = 10,
+                                                                 pady = 10)
+            elif i > 7 and i < 12:
+                var = tk.IntVar()
+                checkbutton_vars.append(var)
+                checkbutton = tk.Checkbutton(conc_select,
+                                            text = str(concentrations[i]) + "ppm",
+                                            font = ("Arial", 15),
+                                            bd = (15),
+                                            variable = var).grid(row = 2,
+                                                                 column = i - 8,
+                                                                 padx = 10,
+                                                                 pady = 10)
+            elif i > 11:
+                var = tk.IntVar()
+                checkbutton_vars.append(var)
+                checkbutton = tk.Checkbutton(conc_select,
+                                            text = str(concentrations[i]) + "ppm",
+                                            font = ("Arial", 15),
+                                            bd = (15),
+                                            variable = var).grid(row = 3,
+                                                                 column = i - 12,
+                                                                 padx = 10,
+                                                                 pady = 10)
+        conc_button = tk.Button(conc_select,
+                                text = "Accept STD concentrations:",
+                                font = ("Arial", 15),
+                                command = lambda: [print(concentration_for_standards)]).grid(row =4,
+                                                                       column = 2,
+                                                                       padx = 10,
+                                                                       pady = 10)
+
     def desired_conc():
+        standards = []
         conc_select = tk.Tk()
         conc_select.title("ICP Standard Cookbook by John")
         conc_select.geometry("1024x600")
@@ -139,7 +202,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 0, column = 0, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(0.25)).grid(row = 0, column = 0, padx = 10, pady = 10)
         conc_2 = tk.Checkbutton(conc_select,
                                 text = "0.50 ppm",
                                 font = ("Arial", 15),
@@ -148,7 +212,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 0, column = 1, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(0.50)).grid(row = 0, column = 1, padx = 10, pady = 10)
         conc_3 = tk.Checkbutton(conc_select,
                                 text = "1.0 ppm",
                                 font = ("Arial", 15),
@@ -157,7 +222,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 0, column = 2, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(1.0)).grid(row = 0, column = 2, padx = 10, pady = 10)
         conc_4 = tk.Checkbutton(conc_select,
                                 text = "2.5 ppm",
                                 font = ("Arial", 15),
@@ -166,7 +232,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 0, column = 3, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(2.5)).grid(row = 0, column = 3, padx = 10, pady = 10)
         conc_5 = tk.Checkbutton(conc_select,
                                 text = "5.0 ppm",
                                 font = ("Arial", 15),
@@ -175,7 +242,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 1, column = 0, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(5.0)).grid(row = 1, column = 0, padx = 10, pady = 10)
         conc_6 = tk.Checkbutton(conc_select,
                                 text = "10.0 ppm",
                                 font = ("Arial", 15),
@@ -184,7 +252,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 1, column = 1, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(10.0)).grid(row = 1, column = 1, padx = 10, pady = 10)
         conc_7 = tk.Checkbutton(conc_select,
                                 text = "20.0 ppm",
                                 font = ("Arial", 15),
@@ -193,7 +262,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 1, column = 2, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(20.0)).grid(row = 1, column = 2, padx = 10, pady = 10)
         conc_8 = tk.Checkbutton(conc_select,
                                 text = "25.0 ppm",
                                 font = ("Arial", 15),
@@ -202,7 +272,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 1, column = 3, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(25.0)).grid(row = 1, column = 3, padx = 10, pady = 10)
         conc_9= tk.Checkbutton(conc_select,
                                 text = "40.0 ppm",
                                 font = ("Arial", 15),
@@ -211,7 +282,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 2, column = 0, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(40.0)).grid(row = 2, column = 0, padx = 10, pady = 10)
         conc_10 = tk.Checkbutton(conc_select,
                                 text = "50.0 ppm",
                                 font = ("Arial", 15),
@@ -220,7 +292,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 2, column = 1, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(50.0)).grid(row = 2, column = 1, padx = 10, pady = 10)
         conc_11 = tk.Checkbutton(conc_select,
                                 text = "100.0 ppm",
                                 font = ("Arial", 15),
@@ -229,7 +302,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 2, column = 2, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(100.0)).grid(row = 2, column = 2, padx = 10, pady = 10)
         conc_12 = tk.Checkbutton(conc_select,
                                 text = "200.0 ppm",
                                 font = ("Arial", 15),
@@ -238,7 +312,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 2, column = 3, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(200.0)).grid(row = 2, column = 3, padx = 10, pady = 10)
         conc_13 = tk.Checkbutton(conc_select,
                                 text = "400.0 ppm",
                                 font = ("Arial", 15),
@@ -247,7 +322,8 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 3, column = 0, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(400.0)).grid(row = 3, column = 0, padx = 10, pady = 10)
         conc_14 = tk.Checkbutton(conc_select,
                                 text = "800.0 ppm",
                                 font = ("Arial", 15),
@@ -256,140 +332,25 @@ class GUI:
                                 onvalue = 1,
                                 offvalue = 0,
                                 height = 2,
-                                width = 10).grid(row = 3, column = 1, padx = 10, pady = 10)
+                                width = 10,
+                                command = lambda: standards.append(800.0)).grid(row = 3, column = 1, padx = 10, pady = 10)
+        standards_label = tk.Label(conc_select,
+                                   text = "Choose Concentrations",
+                                   font = ("Arial", 15)).grid(row = 4, columnspan = 4)
+        clear_button = tk.Button(conc_select,
+                                 text = "Clear Selection",
+                                 font = ("Arial", 15),
+                                 command = lambda: [standards.clear()]).grid(row = 5,
+                                                                             column =1,
+                                                                             padx = 10,
+                                                                             pady = 10)
+        conc_button = tk.Button(conc_select,
+                                text = "Accept STD concentrations:",
+                                font = ("Arial", 15),
+                                command = lambda: print(standards)).grid(row =5,
+                                                                       column = 2,
+                                                                       padx = 10,
+                                                                       pady = 10)
 
-class control:
-
-    def Al_click():
-        Al_stock_select = tk.Tk()
-        Al_stock_select.title("ICP Standard cookbook By John")
-        Al_stock_select.geometry("1024x600")
-        Al_label = ttk.Label(Al_stock_select,
-                            text = "Choose Stock Standard",
-                            font = ("Arial", 25)).grid(row = 0, column = 0, columnspan = 5)
-        Al_1000 = tk.Button(Al_stock_select,
-                            font = ("Arial", 15),
-                            text = "1,000 ppm Aluminium",
-                            command = lambda: [control.Al_stock_1000(),Al_stock_select.destroy()]).grid(row = 1,
-                                                                        column = 0,
-                                                                        padx = 20, pady = 20)
-        Al_10000 = tk.Button(Al_stock_select,
-                            font = ("Arial", 15), text = "10,000 ppm Aluminium",
-                            command = lambda: [control.Al_stock_10000(), Al_stock_select.destroy()]).grid(row = 2, column = 0,
-                                                                        padx = 20, pady = 20)
-
-    def Al_stock_1000():
-        Al_Check_1 = tk.IntVar()
-        Al_Check_2 = tk.IntVar()
-        Al_Check_3 = tk.IntVar()
-        Al_Check_4 = tk.IntVar()
-        Al_1000 = tk.Tk()
-        Al_1000.title("ICP Standard cookbook By John")
-        Al_1000.geometry("1024x600")
-        Al_std1 = ttk.Label(Al_1000,
-                            text = "Add 0.625 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 0, column = 3)
-        Al_std2 = ttk.Label(Al_1000,
-                            text = "Add 6.25 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 1, column = 3)
-        Al_std3 = ttk.Label(Al_1000,
-                            text = "Add 12.5 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 2, column = 3)
-        Al_std4 = ttk.Label(Al_1000,
-                            text = "Add 25 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 3, column = 3)
-        close = tk.Button(Al_1000,
-                        font = ("Arial", 15),
-                        text = "Close",
-                        command = lambda: [Al_1000.destroy()]).grid(row = 4, column = 0)
-        std1_check = tk.Checkbutton(Al_1000, text = "STD 1: 2.5 ppm",
-                                font = ("Arial", 15),
-                                bd = (15),
-                                variable = Al_Check_1,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 0, column = 0, padx = 20, pady = 20)
-        std2_check = tk.Checkbutton(Al_1000, text = "STD 2: 25 ppm",
-                                font = ("Arial", 15),
-                                bd = 15,
-                                variable = Al_Check_2,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 1, column = 0, padx = 20, pady = 20)
-        std3_check = tk.Checkbutton(Al_1000, text = "STD 3: 50 ppm",
-                                font = ("Arial", 15),
-                                bd = 15,
-                                variable = Al_Check_3,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 2, column = 0, padx = 20, pady = 20)
-        std4_check = tk.Checkbutton(Al_1000, text = "STD 4: 100 ppm",
-                                font = ("Arial", 15),
-                                bd = 15,
-                                variable = Al_Check_4,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 3, column = 0, padx = 20, pady = 20)
-
-    def Al_stock_10000():
-        Al_Check_1 = tk.IntVar()
-        Al_Check_2 = tk.IntVar()
-        Al_Check_3 = tk.IntVar()
-        Al_Check_4 = tk.IntVar()
-        Al_10000 = tk.Tk()
-        Al_10000.title("ICP Standard cookbook By John")
-        Al_10000.geometry("1024x600")
-        Al_std1 = ttk.Label(Al_10000,
-                            text = "Add 0.0625 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 0, column = 3)
-        Al_std2 = ttk.Label(Al_10000,
-                            text = "Add 0.625 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 1, column = 3)
-        Al_std3 = ttk.Label(Al_10000,
-                            text = "Add 1.25 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 2, column = 3)
-        Al_std4 = ttk.Label(Al_10000,
-                            text = "Add 2.5 mL of 1000 ppm Al Stock",
-                            font = ("Arial", 15)).grid(row = 3, column = 3)
-        close = tk.Button(Al_10000,
-                        text = "Close",
-                        font = ("Arial", 15),
-                        command = lambda: [Al_10000.destroy()]).grid(row = 4, column = 0)
-        STD1_check = tk.Checkbutton(Al_10000, text = "STD 1: 2.5 ppm",
-                                font = ("Arial", 15),
-                                bd = (15),
-                                variable = Al_Check_1,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 0, column = 0, padx = 20, pady = 20)
-        STD2_check = tk.Checkbutton(Al_10000, text = "STD 2: 25 ppm",
-                                font = ("Arial", 15),
-                                bd = 15,
-                                variable = Al_Check_2,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 1, column = 0, padx = 20, pady = 20)
-        STD3_check = tk.Checkbutton(Al_10000, text = "STD 3: 50 ppm",
-                                font = ("Arial", 15),
-                                bd = 15,
-                                variable = Al_Check_3,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 2, column = 0, padx = 20, pady = 20)
-        STD4_check = tk.Checkbutton(Al_10000, text = "STD 4: 100 ppm",
-                                font = ("Arial", 15),
-                                bd = 15,
-                                variable = Al_Check_4,
-                                onvalue = 1,
-                                offvalue = 0,
-                                height = 2,
-                                width = 10).grid(row = 3, column = 0, padx = 20, pady = 20)
 
 icp_gui = GUI.ICP_standards()
