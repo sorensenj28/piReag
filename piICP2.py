@@ -141,7 +141,7 @@ class control:
         conc_frame.pack()
         concentrations = []
         conc_label = tk.Label(conc_frame,
-                              text = "Select the 4 desired concentrations",
+                              text = "Select the desired concentrations",
                               font = ("Arial", 18)).grid(row = 0, columnspan = 5)
         conc_1 = tk.Button(conc_frame,
                            text = "0.25 ppm",
@@ -214,10 +214,11 @@ class control:
                            command = lambda: [concentrations.append(800.0),
                                               text.insert(tk.END, "800.0 ppm" + "\n")]).grid(row = 3, column = 3, padx = 25, pady = 20)
         text = tk.Text(conc_frame,
-                       height = 4,
+                       height = 6,
                        width = 40,
                        font = ("Arial", 18))
         text.grid(row = 4, columnspan = 5, padx = 25, pady = 20)
+
         clear_button = tk.Button(conc_frame,
                                  text = "Clear Selection",
                                  font = ("Arial", 18),
@@ -265,11 +266,10 @@ class math:
     def calculate_conc(stock_concentrations, final_concentrations):
         stock = stock_concentrations
         final = final_concentrations
-        std1 = (final[0]*250) / stock *1000
-        std2 = (final[1]*250) / stock *1000
-        std3 = (final[2]*250) / stock *1000
-        std4 = (final[3]*250) / stock *1000
-        std_lst = [std1, std2, std3, std4]
+        std_lst = []
+        for i in range(len(final_concentrations)):
+            std = (final[i] * 250) / stock * 1000
+            std_lst.append(std)
         return std_lst
 
 
