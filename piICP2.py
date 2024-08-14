@@ -214,10 +214,10 @@ class control:
                            command = lambda: [concentrations.append(800.0),
                                               text.insert(tk.END, "800.0 ppm" + "\n")]).grid(row = 3, column = 3, padx = 25, pady = 20)
         text = tk.Text(conc_frame,
-                       height = 6,
+                       height = 5,
                        width = 40,
                        font = ("Arial", 18))
-        text.grid(row = 4, columnspan = 5, padx = 25, pady = 20)
+        text.grid(row = 4, columnspan = 5, padx = 25, pady = 15)
 
         clear_button = tk.Button(conc_frame,
                                  text = "Clear Selection",
