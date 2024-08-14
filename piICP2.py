@@ -147,77 +147,77 @@ class control:
                            text = "0.25 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(0.25),
-                                              text.insert(tk.END, "0.25 ppm" + "\n")]).grid(row = 1, column = 0, padx = 25, pady = 30)
+                                              text.insert(tk.END, "0.25 ppm" + "\n")]).grid(row = 1, column = 0, padx = 25, pady = 20)
         conc_2 = tk.Button(conc_frame,
                            text = "0.50 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(0.50),
-                                              text.insert(tk.END, "0.50 ppm" + "\n")]).grid(row = 1, column = 1, padx = 25, pady = 30)
+                                              text.insert(tk.END, "0.50 ppm" + "\n")]).grid(row = 1, column = 1, padx = 25, pady = 20)
         conc_3 = tk.Button(conc_frame,
                            text = "1.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(1.0),
-                                              text.insert(tk.END, "1.0 ppm" + "\n")]).grid(row = 1, column = 2, padx = 25, pady = 30)
+                                              text.insert(tk.END, "1.0 ppm" + "\n")]).grid(row = 1, column = 2, padx = 25, pady = 20)
         conc_4 = tk.Button(conc_frame,
                            text = "2.5 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(2.5),
-                                              text.insert(tk.END, "2.5 ppm" + "\n")]).grid(row = 1, column = 3, padx = 25, pady = 30)
+                                              text.insert(tk.END, "2.5 ppm" + "\n")]).grid(row = 1, column = 3, padx = 25, pady = 20)
         conc_5 = tk.Button(conc_frame,
                            text = "5.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(5.0),
-                                              text.insert(tk.END, "5.0 ppm" + "\n")]).grid(row = 1, column = 4, padx = 25, pady = 30)
+                                              text.insert(tk.END, "5.0 ppm" + "\n")]).grid(row = 1, column = 4, padx = 25, pady = 20)
         conc_6 = tk.Button(conc_frame,
                            text = "10.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(10.0),
-                                              text.insert(tk.END, "10.0 ppm" + "\n")]).grid(row = 2, column = 0, padx = 25, pady = 30)
+                                              text.insert(tk.END, "10.0 ppm" + "\n")]).grid(row = 2, column = 0, padx = 25, pady = 20)
         conc_7 = tk.Button(conc_frame,
                            text = "20.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(20.0),
-                                              text.insert(tk.END, "20.0 ppm" + "\n")]).grid(row = 2, column = 1, padx = 25, pady = 30)
+                                              text.insert(tk.END, "20.0 ppm" + "\n")]).grid(row = 2, column = 1, padx = 25, pady = 20)
         conc_8 = tk.Button(conc_frame,
                            text = "25.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(25.0),
-                                              text.insert(tk.END, "25.0 ppm" + "\n")]).grid(row = 2, column = 2, padx = 25, pady = 30)
+                                              text.insert(tk.END, "25.0 ppm" + "\n")]).grid(row = 2, column = 2, padx = 25, pady = 20)
         conc_9 = tk.Button(conc_frame,
                            text = "40.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(40.0),
-                                              text.insert(tk.END, "40.0 ppm" + "\n")]).grid(row = 2, column = 3, padx = 25, pady = 30)
+                                              text.insert(tk.END, "40.0 ppm" + "\n")]).grid(row = 2, column = 3, padx = 25, pady = 20)
         conc_10 = tk.Button(conc_frame,
                            text = "50.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(50.0),
-                                              text.insert(tk.END, "50.0 ppm" + "\n")]).grid(row = 2, column = 4, padx = 25, pady = 30)
+                                              text.insert(tk.END, "50.0 ppm" + "\n")]).grid(row = 2, column = 4, padx = 25, pady = 20)
         conc_11 = tk.Button(conc_frame,
                            text = "100.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(100.0),
-                                              text.insert(tk.END, "100.0 ppm" + "\n")]).grid(row = 3, column = 0, padx = 25, pady = 30)
+                                              text.insert(tk.END, "100.0 ppm" + "\n")]).grid(row = 3, column = 0, padx = 25, pady = 20)
         conc_12 = tk.Button(conc_frame,
                            text = "200.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(200.0),
-                                              text.insert(tk.END, "200.0 ppm" + "\n")]).grid(row = 3, column = 1, padx = 25, pady = 30)
+                                              text.insert(tk.END, "200.0 ppm" + "\n")]).grid(row = 3, column = 1, padx = 25, pady = 20)
         conc_13 = tk.Button(conc_frame,
                            text = "400.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(400.0),
-                                              text.insert(tk.END, "400.0 ppm" + "\n")]).grid(row = 3, column = 2, padx = 25, pady = 30)
+                                              text.insert(tk.END, "400.0 ppm" + "\n")]).grid(row = 3, column = 2, padx = 25, pady = 20)
         conc_14 = tk.Button(conc_frame,
                            text = "800.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(800.0),
-                                              text.insert(tk.END, "800.0 ppm" + "\n")]).grid(row = 3, column = 3, padx = 25, pady = 30)
+                                              text.insert(tk.END, "800.0 ppm" + "\n")]).grid(row = 3, column = 3, padx = 25, pady = 20)
         text = tk.Text(conc_frame,
                        height = 4,
                        width = 40,
                        font = ("Arial", 18))
-        text.grid(row = 4, columnspan = 5, padx = 25, pady = 30)
+        text.grid(row = 4, columnspan = 5, padx = 25, pady = 20)
         clear_button = tk.Button(conc_frame,
                                  text = "Clear Selection",
                                  font = ("Arial", 18),
