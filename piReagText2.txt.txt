@@ -1,0 +1,166 @@
+1 L: Rinsing Liquid
+Add 2 mL of concentrated Sulfuric Acid to 1 L of Deionized Water
+
+500 mL: Nitrate/Nitrite Buffer
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 25 g of Ammonium Chloride
+Add 3.6 mL of Ammonium Hydroxide
+Dilute to mark.
+
+1 L: Nitrate/Nitrite Buffer
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 50 g of Ammonium Chloride
+Add 7.2 mL of Ammonium Hydroxide
+Dilute to mark.
+
+2 L: Nitrate/Nitrite Buffer
+Fill a 2000 mL volumetric flask half full with Deionized Water
+Add 100 g of Ammonium chloride
+Add 14.4 of Ammonium Hydroxide
+Dilute to mark.
+
+500 mL: Color Reagent
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 50 mL of 32% Hydrochloric Acid
+Add 0.25 g of N-(1Naphtyl)ethylenediamine dihydrochloride 
+Add 5 g of Sulfanilamide
+Dilute to mark.
+
+1 L: Color Reagent
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 100 mL of 32% Hydrochloric Acid
+Add 0.5 g of N-(1Naphthyl)ethylenediamine dihydrochloride
+Add 10 g of Sulfanilamide
+Dilute to mark.
+
+500 mL: FFD6
+To 500 mL of Deionized Water add 1 mL of FFD6.
+
+1 L: FFD6
+To 1000 mL of Deionized Water add 2 mL of FFD6.
+
+500 mL: Sulfuric Acid
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 20 mL of concentrated Sulfuric Acid
+Dilute to mark, and pour into bottle
+Add 1 mL of FFD6 to bottle
+
+1 L: Sulfuric Acid
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 40 mL of concentrated Sulfuric Acid
+Dilute to mark, and pour into bottle
+Add 2 mL of FFD6 to bottle.
+
+500 mL: Ammonium Heptamolybdate
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 20 mL of concentrated Sulfuric Acid
+Add 2.4 g of Ammonium Heptamolybdate
+Dilute to mark, and pour into bottle
+Add 1 mL of FFD6 to bottle.
+
+1 L: Ammonium Heptamolybdate
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 40 mL of concentrated Sulfuric Acid
+Add 4.8 g of Ammonium Heptamolybdate
+Dilute to mark, and pour into bottle
+Add 2 mL of FFD6 to bottle.
+
+Potassium Antimony Oxide Tartate
+Fill a 100 mL volumetric flask half way with Deionized Water
+Add 300 mg of Potassium Antimony Oxide Tartate
+Dilute to mark
+
+500 mL: L+ Ascorbic Acid
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 9 g of L+ Ascorbic Acid
+Add 10 mL  of Stock Solution
+Dilute to mark.
+
+1 L: L+ Ascorbic Acid
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 18 g of L+ Ascorbic Acid
+Add 20 mL of Stock Solution
+Dilute to mark.
+
+500 mL: Ammonia Buffer
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 16.5 g of Potassium Sodium Tartate
+Add 12 g of Sodium Citrate Dihydrate
+Add 3 mL of 32% Hydrochloric Acid or 5 mL of 6N Hydrocloric Acid
+Dilute to mark
+
+1 L: Ammonia Buffer
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 33 g of Potassium Sodium Tartate
+Add 24 g of Sodium Citrate Dihydrate
+Add 6 mL 32% Hydrochloric Acid or 10 mL of 6N Hydrochloric Acid
+Dilute to mark
+
+2 L: Ammonia Buffer
+Fill a 2000 mL volumetric flask half full with Deionized Water
+Add 66 g of Potassium Sodium Tartate
+Add 48 g of Sodium Citrate Dihydrate
+Add 12 mL of 32% Hydrochloric Acid or 20 mL of 6N Hydrochloric Acid
+Dilute to mark
+
+500 mL: Salicyalite
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 12.5 g of Sodium Hydroxide
+Add 40 g Sodium Salicylite
+Dilute to mark.
+
+1 L: Salicyalite
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 25 g of Sodium Hydroxide
+Add 80 g of Sodium Salicyalite
+Dilute to mark.
+
+500 mL: Nitroprusside
+Fill a 500 mL volumetric flask half full with Deionized Water
+Add 0.5 g of Sodium Nitroprusside
+Dilute to mark.
+
+1 L: Nitroprusside
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 1.0 g of Sodium Nitroprusside
+Dilute to mark.
+
+500 mL: Dichlorocyanurite
+Fill a 500 mL volumteric Flask half full with Deionized Water
+Add 1.0 g of Sodium Dichlorocyanurite
+Dilute to mark.
+
+1 L: Dichlorocyanurite
+Fill a 1000 mL volumetric flask half full with Deionized Water
+Add 2.0 g of Sodium Dichlorocyanurite
+Dilute to mark.
+
+STD 1
+250 uL of 100 ppm Nitrate/nitrite Stock Standard
+25 uL of 1000 ppm Phosphate Stock Standard
+25 uL of 1000 ppm Ammonia Stock Standard
+Dilute to 100 mL for final 0.25 ppm.
+
+STD 2
+750 uL of 100 ppm Nitrate/nitrite Stock Standard
+75 uL of 1000 ppm Phosphate Stock Standard
+75 uL of 1000 ppm Ammonia Stock Standard
+Dilute to 100 mL for final 0.75 ppm.
+
+STD 3
+1000 uL of 100 ppm Nitrate/nitrite Stock Standard
+100 uL of 1000 ppm Phosphate Stock Standard
+100 uL of 1000 ppm Ammonia Stock Standard
+Dilute to 100 mL for final 1.0 ppm.
+
+STD 4
+2000 uL of 100 ppm Nitrate/nitrite Stock Standard
+200 uL of 1000 ppm Phosphate Stock Standard
+200 uL of 1000 ppm Ammonia Stock Standard
+Dilute to 100 mL for final 2.0 ppm.
+
+STD 5
+4000 uL of 100 ppm Nitrate/nitrite Stock Standard
+400 uL of 1000 ppm Phosphate Stock Standard
+400 uL of 1000 ppm Ammonia Stock Standard
+Dilute to 100 mL for final 4.0 ppm.
