@@ -55,7 +55,7 @@ class window:
                                 text = "Nitrate/Nitrite Buffer",
                                 font = ("Arial", 18),
                                 command = lambda: [window.clear_frame(nitr_frame),
-                                                   window.volume_frame("nitrate_buffer")]).grid(row = 6, column = 1, padx = 20, pady = 20)
+                                                   window.buffer_volume_frame("nitrate_buffer")]).grid(row = 6, column = 1, padx = 20, pady = 20)
         color_reag = tk.Button(nitr_frame,
                                text = "Color Reagent",
                                font = ("Arial", 18),
@@ -109,7 +109,7 @@ class window:
                                 text = "Ammonium Buffer",
                                 font = ("Arial", 18),
                                 command = lambda: [window.clear_frame(ammo_frame),
-                                                   window.volume_frame("ammonium_buffer")]).grid(row = 6, column = 1, padx = 20, pady = 20)
+                                                   window.buffer_volume_frame("ammonium_buffer")]).grid(row = 6, column = 1, padx = 20, pady = 20)
         sali_button = tk.Button(ammo_frame,
                                   text = "Sodium Salicyalite Solution",
                                   font = ("Arial", 18),
@@ -168,7 +168,7 @@ class window:
                                 command = lambda: [window.clear_frame(std_frame),
                                                    window.home_frame()]).grid(row = 8, column = 0, padx = 20, pady = 20)
 
-    def volume_frame(reagent):
+    def buffer_volume_frame(reagent):
         reagent = reagent
         vol_frame = tk.Frame(root)
         vol_frame.pack()
@@ -190,6 +190,30 @@ class window:
                           font = ("Arial", 18),
                           command = lambda: [window.clear_frame(vol_frame),
                                              window.instruct_frame(recipe.get_recipe(reagent, 2000))]).grid(row = 7, column = 1, padx = 20, pady = 40)
+
+        home_button = tk.Button(vol_frame,
+                                text = "Home",
+                                font = ("Arial", 18),
+                                command = lambda: [window.clear_frame(vol_frame),
+                                                   window.home_frame()]).grid(row = 8, column = 0, padx = 20, pady = 20)
+
+    def volume_frame(reagent):
+        reagent = reagent
+        vol_frame = tk.Frame(root)
+        vol_frame.pack()
+        for i in range(6):
+            label = tk.Label(vol_frame,
+                             text = "").grid(row = i)
+        vol_1 = tk.Button(vol_frame,
+                          text = "500 mL",
+                          font = ("Arial", 18),
+                          command = lambda: [window.clear_frame(vol_frame),
+                                             window.instruct_frame(recipe.get_recipe(reagent, 500))]).grid(row = 6, column = 1, padx = 20, pady = 40)
+        vol_2 = tk.Button(vol_frame,
+                          text = "1,000 mL",
+                          font = ("Arial", 18),
+                          command = lambda: [window.clear_frame(vol_frame),
+                                             window.instruct_frame(recipe.get_recipe(reagent, 1000))]).grid( row = 6, column = 2, padx = 20, pady = 40)
 
         home_button = tk.Button(vol_frame,
                                 text = "Home",
