@@ -200,26 +200,26 @@ class window:
     def instruct_frame(recipe):
         inst_frame = tk.Frame(root)
         inst_frame.pack()
-        for i in range(5):
+        for i in range(4):
             label = tk.Label(inst_frame,
                              text = "").grid(row = i)
         text = tk.Text(inst_frame,
                        height = 10,
                        width = 40,
                        font = ("Arial", 18))
-        text.grid(row = 5, column = 1, padx = 20, pady = 40)
+        text.grid(row = 4, column = 1, columnspan = 2, padx = 20, pady = 35)
         for line in recipe:
             text.insert(tk.END, line)
         home_button = tk.Button(inst_frame,
                                 text = "Home",
                                 font = ("Arial", 18),
                                 command = lambda: [window.clear_frame(inst_frame),
-                                                   window.home_frame()]).grid(row = 6, column = 0, padx = 20, pady = 20)
+                                                   window.home_frame()]).grid(row = 5, column = 0, padx = 20, pady = 20)
 
 class recipe:
 
     def get_recipe(reagent, volume):
-        with open("piReagText.txt", mode = "r") as file:
+        with open("piReagText2.txt", mode = "r") as file:
             recipes = file.readlines()
         if reagent == "nitrate_buffer" and volume == 500:
             recipe = recipes[5:9]
