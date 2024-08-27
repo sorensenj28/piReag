@@ -1,0 +1,88 @@
+Mehlich 3 Protocol (M3):
+Stock Solution:
+Fill a 100 mL volumetric flask with 50-60 mL of DI Water
+Add 5.556 g of Ammonium Flouride (NH4F)
+Add 2.823 g of Ethlenediaminetetraacetic acid (EDTA)
+Stir on hotplate until dissolved
+Dilute to mark.
+
+Working Solution:
+1 L:
+Fill a 1,000 mL volumetric flask with 500-700 mL of DI Water
+Add 50. 025 g of Ammonium Nitrat (NH4NO3)
+Add 25 mL of stock solution
+Add 28.75 mL of glacial acetic acid
+Add 20.5 mL of 10% nitric acid (HNO3)
+Stir on hotplate until disssolved
+Dilute to mark.
+
+2 L:
+Fill a 2,000 mL volumetric flask with 700-800 mL of DI Water
+Add 100.05 g of Ammonium Nitrate (NH4NO3)
+Add 50 mL of Stock Solution
+Add 57.5 mL of glacial acetic acid
+Add 41 mL of 10% nitric acid
+Stir on hotplate until dissolved
+Dilute to mark.
+
+
+Haney 3 Acids (H3A):
+1 L:
+Fill a 1,000 mL volumetric flask with 500-700 mL of DI Water
+Add 1.1 g of Malic Acid
+Add 0.7 g of Citric Acid
+Add 0.45 g of Oxalic Acid
+Stir on hotplate until dissolved
+Dilute to mark.
+
+2 L:
+Fill a 2,000 mL volumetric flask with 1,000 to 1,400 mL of DI Water
+Add 2.2 g of Malic Acid
+Add 1.4 g of Citric Acid
+Add 0.90 g of Oxalic Acid
+Stir on hotplate until dissolved
+Dilute to mark.
+
+
+Olsen P (0.5 M NaHCO3):
+1 L:
+Fill a 1,000 mL volumetric flask with 500-700 mL of DI Water
+Add 42.0 g of Sodium Carbonate (NaHCO3)
+Stir on hotplate until dissolved
+Check pH and add Sodium Hydroxide (NaOH) as needed until solution is 8.0
+Use Hydrochloric Acid (HCl) if pH is too high
+Dilute to mark.
+
+2 L:
+Fill a 2,000 mL volumetric flask with 1,000-1,400 mL of DI Water
+Add 84.0 g of Sodium Carbonate (NaHCO3)
+Stir on hotplate until dissolved
+Check pH and add Sodium Hydroxide (NaOH) as needed until solution is 8.0
+Use Hydrochloric Acid (HCl) if pH is too high
+Dilute to mark.
+
+
+Potassium Chloride (KCl):
+1 L 1 N (KCl):
+Fill a 1,000 mL volumetric flask with 500-700 mL of DI Water
+Add 74.55 g Potassium Chloride (KCl)
+Stir on hotplate until dissolved
+Dilute to mark.
+
+2 L 1 N (KCl):
+Fill a 2,000 mL volumetric flask with 1,000-1,400 mL of DI Water
+Add 149.10 g Potassium Chloride (KCl)
+Stir on hotplate until dissolved
+Dilute to mark.
+
+1 L 2 N (KCl):
+Fill a 1,000 mL volumetric flask with 500-700 mL of DI Water
+Add 149.10 g Potassium Chloride (KCl)
+Stir on hotplate until dissolved
+Dilute to mark.
+
+2 L 2 N (KCl):
+Fill a 2,000 mL volumetric flask with 1,000-1,400 of DI Water
+Add 298.2 g Potassium Chloride (KCl)
+Stir on hotplate until dissolved
+Dilute to mark.
