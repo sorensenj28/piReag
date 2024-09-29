@@ -739,6 +739,35 @@ class skalar_recipes:
 
 class icp_cookbook():
     def icp_home_frame():
+        home_frame = tk.Frame(root)
+        home_frame.pack()
+        std4_button = tk.Button(home_frame,
+                                text = "Standard 4 Elements and Concentrations",
+                                font = ("Arial", 18),
+                                command = lambda: [window.clear_frame(home_frame),
+                                                   icp_cookbook.icp_element_frame()]).grid(row = 1, column = 0, padx = 50, pady = 50)
+        std3_button = tk.Button(home_frame,
+                                text = "Standard 3 Protocol",
+                                font = ("Arial", 18),
+                                command = lambda: [window.clear_frame(home_frame),
+                                                   icp_control.std_3_proto()]).grid(row = 1, column = 1, padx = 50, pady = 50)
+        std2_button = tk.Button(home_frame,
+                                text = "Standard 2 protocol",
+                                font = ("Arial", 18),
+                                command = lambda: [window.clear_frame(home_frame),
+                                                   icp_control.std_2_proto()]).grid(row = 2, column = 0, padx = 50, pady =50)
+        std1_button = tk.Button(home_frame,
+                                text = "Standard 1 Protocol",
+                                font = ("Arial", 18),
+                                command = lambda: [window.clear_frame(home_frame),
+                                                   icp_control.std_1_proto()]).grid(row = 2, column = 1, padx = 50, pady = 50)
+        piLab_home = tk.Button(home_frame,
+                         text = "piLab Home",
+                         font = ("Arial", 18),
+                         command = lambda: [window.clear_frame(home_frame),
+                                            main_window.piLab_home()]).grid(row = 3, column = 0, padx = 50, pady = 50)
+
+    def icp_element_frame():
         element_frame = tk.Frame(root)
         element_frame.pack()
         Al_button = tk.Button(element_frame,
@@ -832,13 +861,79 @@ class icp_cookbook():
                          font = ("Arial", 20),
                          command = lambda: [window.clear_frame(element_frame),
                                             main_window.piLab_home()]).grid(row = 4, column = 0, padx = 20, pady = 20)
-        piLab_home = tk.Button(element_frame,
-                         text = "piLab Home",
-                         font = ("Arial", 20),
-                         command = lambda: [window.clear_frame(element_frame),
-                                            main_window.piLab_home()])
+        icp_home = tk.Button(element_frame,
+                             text = "ICP Home",
+                             font = ("Arial", 20),
+                             command = lambda: [window.clear_frame(element_frame),
+                                                icp_cookbook.icp_home_frame()]).grid(row = 4, column = 1, padx = 20, pady = 20)
 
 class icp_control:
+    def std_3_proto():
+        proto = protocols.open_protocols()
+        std_3 = tk.Frame(root)
+        std_3.pack()
+        text = tk.Text(std_3,
+                       height = 6,
+                       width = 50,
+                       font = ("Arial", 18))
+        text.grid(row = 0, column = 0, padx = 20, pady =20)
+        for line in proto[90:94]:
+            text.insert(tk.END, line)
+        piLab_home = tk.Button(std_3,
+                         text = "piLab Home",
+                         font = ("Arial", 20),
+                         command = lambda: [window.clear_frame(std_3),
+                                            main_window.piLab_home()]).grid(row = 1, column = 0, padx = 20, pady = 20)
+        icp_home = tk.Button(std_3,
+                             text = "ICP Home",
+                             font = ("Arial", 20),
+                             command = lambda: [window.clear_frame(std_3),
+                                                icp_cookbook.icp_home_frame()]).grid(row = 1, column = 2, padx = 20, pady = 20)
+
+    def std_2_proto():
+        proto = protocols.open_protocols()
+        std_2 = tk.Frame(root)
+        std_2.pack()
+        text = tk.Text(std_2,
+                       height = 6,
+                       width = 50,
+                       font = ("Arial", 18))
+        text.grid(row = 0, column = 0, padx = 20, pady =20)
+        for line in proto[95:99]:
+            text.insert(tk.END, line)
+        piLab_home = tk.Button(std_2,
+                         text = "piLab Home",
+                         font = ("Arial", 20),
+                         command = lambda: [window.clear_frame(std_2),
+                                            main_window.piLab_home()]).grid(row = 1, column = 0, padx = 20, pady = 20)
+        icp_home = tk.Button(std_2,
+                             text = "ICP Home",
+                             font = ("Arial", 20),
+                             command = lambda: [window.clear_frame(std_2),
+                                                icp_cookbook.icp_home_frame()]).grid(row = 1, column = 2, padx = 20, pady = 20)
+
+    def std_1_proto():
+        proto = protocols.open_protocols()
+        std_1 = tk.Frame(root)
+        std_1.pack()
+        text = tk.Text(std_1,
+                       height = 6,
+                       width = 50,
+                       font = ("Arial", 18))
+        text.grid(row = 0, column = 0, padx = 20, pady =20)
+        for line in proto[100:104]:
+            text.insert(tk.END, line)
+        piLab_home = tk.Button(std_1,
+                         text = "piLab Home",
+                         font = ("Arial", 20),
+                         command = lambda: [window.clear_frame(std_1),
+                                            main_window.piLab_home()]).grid(row = 1, column = 0, padx = 20, pady = 20)
+        icp_home = tk.Button(std_1,
+                             text = "ICP Home",
+                             font = ("Arial", 20),
+                             command = lambda: [window.clear_frame(std_1),
+                                                icp_cookbook.icp_home_frame()]).grid(row = 1, column = 2, padx = 20, pady = 20)
+
     def stock_solutions(element):
         element = element
         stock_select = tk.Frame(root)
@@ -875,33 +970,33 @@ class icp_control:
         conc_frame.pack()
         concentrations = []
         conc_label = tk.Label(conc_frame,
-                              text = "Select the desired concentrations",
+                              text = "Select the desired concentration For Standard 4",
                               font = ("Arial", 18)).grid(row = 0, columnspan = 5)
-        conc_1 = tk.Button(conc_frame,
-                           text = "0.25 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(0.25),
-                                              text.insert(tk.END, "0.25 ppm" + "\n")]).grid(row = 1, column = 0, padx = 25, pady = 20)
-        conc_2 = tk.Button(conc_frame,
-                           text = "0.50 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(0.50),
-                                              text.insert(tk.END, "0.50 ppm" + "\n")]).grid(row = 1, column = 1, padx = 25, pady = 20)
-        conc_3 = tk.Button(conc_frame,
-                           text = "1.0 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(1.0),
-                                              text.insert(tk.END, "1.0 ppm" + "\n")]).grid(row = 1, column = 2, padx = 25, pady = 20)
-        conc_4 = tk.Button(conc_frame,
-                           text = "2.5 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(2.5),
-                                              text.insert(tk.END, "2.5 ppm" + "\n")]).grid(row = 1, column = 3, padx = 25, pady = 20)
-        conc_5 = tk.Button(conc_frame,
-                           text = "5.0 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(5.0),
-                                              text.insert(tk.END, "5.0 ppm" + "\n")]).grid(row = 1, column = 4, padx = 25, pady = 20)
+        # conc_1 = tk.Button(conc_frame,
+        #                   text = "0.25 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(0.25),
+        #                                      text.insert(tk.END, "0.25 ppm" + "\n")]).grid(row = 1, column = 0, padx = 25, pady = 20)
+        # conc_2 = tk.Button(conc_frame,
+        #                   text = "0.50 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(0.50),
+        #                                     text.insert(tk.END, "0.50 ppm" + "\n")]).grid(row = 1, column = 1, padx = 25, pady = 20)
+        # conc_3 = tk.Button(conc_frame,
+        #                   text = "1.0 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(1.0),
+        #                                      text.insert(tk.END, "1.0 ppm" + "\n")]).grid(row = 1, column = 2, padx = 25, pady = 20)
+        # conc_4 = tk.Button(conc_frame,
+        #                   text = "2.5 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(2.5),
+        #                                      text.insert(tk.END, "2.5 ppm" + "\n")]).grid(row = 1, column = 3, padx = 25, pady = 20)
+        # conc_5 = tk.Button(conc_frame,
+        #                   text = "5.0 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(5.0),
+        #                                      text.insert(tk.END, "5.0 ppm" + "\n")]).grid(row = 1, column = 4, padx = 25, pady = 20)
         conc_6 = tk.Button(conc_frame,
                            text = "10.0 ppm",
                            font = ("Arial", 15),
@@ -911,42 +1006,57 @@ class icp_control:
                            text = "20.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(20.0),
-                                              text.insert(tk.END, "20.0 ppm" + "\n")]).grid(row = 2, column = 1, padx = 25, pady = 20)
-        conc_8 = tk.Button(conc_frame,
-                           text = "25.0 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(25.0),
-                                              text.insert(tk.END, "25.0 ppm" + "\n")]).grid(row = 2, column = 2, padx = 25, pady = 20)
+                                              text.insert(tk.END, "20.0 ppm" + "\n")]).grid(row = 2, column = 2, padx = 25, pady = 20)
+        # conc_8 = tk.Button(conc_frame,
+        #                   text = "25.0 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(25.0),
+        #                                      text.insert(tk.END, "25.0 ppm" + "\n")]).grid(row = 2, column = 2, padx = 25, pady = 20)
         conc_9 = tk.Button(conc_frame,
                            text = "40.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(40.0),
-                                              text.insert(tk.END, "40.0 ppm" + "\n")]).grid(row = 2, column = 3, padx = 25, pady = 20)
-        conc_10 = tk.Button(conc_frame,
-                           text = "50.0 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(50.0),
-                                              text.insert(tk.END, "50.0 ppm" + "\n")]).grid(row = 2, column = 4, padx = 25, pady = 20)
+                                              text.insert(tk.END, "40.0 ppm" + "\n")]).grid(row = 2, column = 4, padx = 25, pady = 20)
+        # conc_10 = tk.Button(conc_frame,
+        #                   text = "50.0 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(50.0),
+        #                                      text.insert(tk.END, "50.0 ppm" + "\n")]).grid(row = 2, column = 4, padx = 25, pady = 20)
         conc_11 = tk.Button(conc_frame,
                            text = "100.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(100.0),
                                               text.insert(tk.END, "100.0 ppm" + "\n")]).grid(row = 3, column = 0, padx = 25, pady = 20)
-        conc_12 = tk.Button(conc_frame,
-                           text = "200.0 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(200.0),
-                                              text.insert(tk.END, "200.0 ppm" + "\n")]).grid(row = 3, column = 1, padx = 25, pady = 20)
-        conc_13 = tk.Button(conc_frame,
-                           text = "400.0 ppm",
-                           font = ("Arial", 15),
-                           command = lambda: [concentrations.append(400.0),
-                                              text.insert(tk.END, "400.0 ppm" + "\n")]).grid(row = 3, column = 2, padx = 25, pady = 20)
+        # conc_12 = tk.Button(conc_frame,
+        #                   text = "200.0 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(200.0),
+        #                                      text.insert(tk.END, "200.0 ppm" + "\n")]).grid(row = 3, column = 1, padx = 25, pady = 20)
+        # conc_13 = tk.Button(conc_frame,
+        #                   text = "400.0 ppm",
+        #                   font = ("Arial", 15),
+        #                   command = lambda: [concentrations.append(400.0),
+        #                                      text.insert(tk.END, "400.0 ppm" + "\n")]).grid(row = 3, column = 2, padx = 25, pady = 20)
         conc_14 = tk.Button(conc_frame,
                            text = "800.0 ppm",
                            font = ("Arial", 15),
                            command = lambda: [concentrations.append(800.0),
-                                              text.insert(tk.END, "800.0 ppm" + "\n")]).grid(row = 3, column = 3, padx = 25, pady = 20)
+                                              text.insert(tk.END, "800.0 ppm" + "\n")]).grid(row = 3, column = 4, padx = 25, pady = 20)
+        blank_1 = tk.Label(conc_frame,
+                            text = "",
+                            font = ("Arial", 15)).grid(row = 2, column = 1, padx = 25, pady = 20)
+        blank_2 = tk.Label(conc_frame,
+                            text = "",
+                            font = ("Arial", 15)).grid(row = 2, column = 3, padx = 25, pady = 20)
+        blank_3 = tk.Label(conc_frame,
+                            text = "",
+                            font = ("Arial", 15)).grid(row = 3, column = 1, padx = 25, pady = 20)
+        blank_4 = tk.Label(conc_frame,
+                            text = "",
+                            font = ("Arial", 15)).grid(row = 3, column = 2, padx = 25, pady = 20)
+        blank_5 = tk.Label(conc_frame,
+                            text = "",
+                            font = ("Arial", 15)).grid(row = 3, column = 3, padx = 25, pady = 20)
         text = tk.Text(conc_frame,
                        height = 5,
                        width = 40,

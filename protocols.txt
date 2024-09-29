@@ -86,3 +86,18 @@ Fill a 2,000 mL volumetric flask with 1,000-1,400 of DI Water
 Add 298.2 g Potassium Chloride (KCl)
 Stir on hotplate until dissolved
 Dilute to mark.
+
+ICP Standard 3 Protocol:
+Standard 3 is 1:2 serial dilution of Standard 4 with DI Water
+Add 25 mL of Standard 4 to a 50 mL volumetric flask
+Dilute to mark.
+
+ICP Standard 2 Protocol:
+Standard 2 is 1:2 serial dilution of Standard 3 with DI Water
+Add 25 mL of Standard 3 to a 50 mL volumetric flask
+Dilute to mark.
+
+ICP Standard 1 Protocol:
+Standard 1 is 1:10 serial dilution of Standard 2 with DI Water
+Add 5 mL of Standard 2 to a 50 mL volumetric flask
+Dilute to mark.
